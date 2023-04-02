@@ -33,13 +33,13 @@ public class Dictionary {
                 String finalAnswer = answer;
                 if (dictionaryAsMap.get(keyWord).stream().anyMatch(d -> d.toLowerCase().contains(finalAnswer.toLowerCase()))) {
                     //answer.contains(dictionary.get(keyWord).get(0))
-                    System.out.println("\t\t\t\tBarwo odgadłeś szukane słowwo. " +
+                    System.out.println("\t\t\t\tBarwo odgadłeś szukane słowwo :D. " +
                             "Wszystkie tłumaczenia dla słowa " + ConsoleColors.GREEN_BOLD + keyWord + ConsoleColors.RESET + " to:");
                     printAllAnswers(keyWord);
                     correct++;
                 } else {
                     incorrect++;
-                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna :(.");
+                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna :(((.");
                     System.out.println("Poprawne odpowiedzi to:");
                     //+ dictionary.get(keyWord) + ConsoleColors.RESET);
                     printAllAnswers(keyWord);
@@ -73,7 +73,7 @@ public class Dictionary {
         }
         BufferedReader br;
         String line;
-        dictionary = new LinkedHashMap<>();
+        dictionary = new TreeMap<>();
         try {
             br = new BufferedReader(new FileReader(file));
             //br= new BufferedReader(new InputStreamReader(new FileInputStream(file), c));
