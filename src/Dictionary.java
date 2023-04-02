@@ -39,7 +39,7 @@ public class Dictionary {
                     correct++;
                 } else {
                     incorrect++;
-                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna.");
+                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna :(.");
                     System.out.println("Poprawne odpowiedzi to:");
                     //+ dictionary.get(keyWord) + ConsoleColors.RESET);
                     printAllAnswers(keyWord);
