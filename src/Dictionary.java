@@ -68,7 +68,8 @@ public class Dictionary {
         //Charset ch = Charset.forName("UTF-8");
         if (!file.exists()) {
             System.out.println("Dictionary file does not exist. The program will be interrupted.");
-            return dictionary;
+            System.out.println("Check that the given path to file and fileName of the dictionary file are correct.");
+            System.exit(0);
         }
         BufferedReader br;
         String line;
