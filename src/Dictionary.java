@@ -73,7 +73,7 @@ public class Dictionary {
         }
         BufferedReader br;
         String line;
-        dictionary = new TreeMap<>();
+        dictionary = new LinkedHashMap<>();
         try {
             br = new BufferedReader(new FileReader(file));
             //br= new BufferedReader(new InputStreamReader(new FileInputStream(file), c));
