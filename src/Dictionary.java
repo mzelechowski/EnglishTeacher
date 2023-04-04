@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Dictionary {
     private final static String path = "C:\\Mike\\EnglishTeacher\\src\\storage\\";
@@ -39,7 +40,7 @@ public class Dictionary {
                     correct++;
                 } else {
                     incorrect++;
-                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna :(((.");
+                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna.");
                     System.out.println("Poprawne odpowiedzi to:");
                     //+ dictionary.get(keyWord) + ConsoleColors.RESET);
                     printAllAnswers(keyWord);
@@ -89,7 +90,9 @@ public class Dictionary {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return dictionary;
+        //return dictionary;
+        //return sortMapByValues(dictionary);
+        return sortByKey2(dictionary);
     }
 
     private void printAllAnswers(String keyWord) {
@@ -104,5 +107,17 @@ public class Dictionary {
         for (Map.Entry<String, List<String>> entry : dictionaryAsMap.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
+    }
+    public Map<String, List<String>> sortMapByValues(Map<String, List<String>> map) {
+        return map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+    }
+    public Map<String, List<String>>  sortByKey2(Map<String, List<String>> map) {
+        Map<String, List<String>> result2 = new LinkedHashMap<>();
+        map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEachOrdered(x -> result2.put(x.getKey(), x.getValue()));
+        return result2;
     }
 }

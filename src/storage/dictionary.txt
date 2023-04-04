@@ -1,3 +1,24 @@
-﻿break-przerwa, złamanie, rozbicie, przerwanie
-cut-ciąć, obciąć, pokroić
-chair-krzesło, fotel, siodełko
+﻿branch-oddział, gałąź, filia, odgałęzienie, konar
+determine-ustalać, decydować, determinować, stanowić
+whether-czy
+prompt-podpowiedć, podpowiedz, monit, podpowiadać, szeptać
+sensible-rozsądny, sensowny, odczuwalny, praktyczny, czuły, zmysłowy, świadomy, inteligentny
+staging area-poczekalnia, strefa postojowa
+commit-zatwierdzenie,
+insight-wgląd, wnikliwość, intuicja,
+unmerged-niescalone
+merge-łączyć, scalać, połączyć się, włączać, zlać się, wcielać, kumulować
+include-włączać
+discard-wyrzucać, odrzucać, porzucić, wylać z pracy, zrzutka
+current-aktualny, bieżący, prąd, nurt, natężęnie prądu, potoczny, rozpowszechniony, obiegowy, nagminny
+hank-motek, talka, kłębek, raksa, pełzacz
+unstaged-niezainscenizowany
+patch-łata, załatać, dosztukować, naprawić, płat
+orphan-sierota
+detached head-odłączona głowa
+merge-łączyć, scalać, połączyć się, włączać, zlać się, wcielać, kumulować
+push-naciskać, popchnać, pchać, przeć, popychać, wsunać, cisnąć, pchać się
+fetch-sprowadzać, wydobywać, dosawić, osiągać, powodować, zrobić wrażenie
+verbosity-gadatliwość, wielomówność, gadulstwo, pustosłowie
+credential-poświadczenie
+credentials-referencje
