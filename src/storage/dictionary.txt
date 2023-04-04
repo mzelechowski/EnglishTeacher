@@ -22,3 +22,4 @@ fetch-sprowadzać, wydobywać, dosawić, osiągać, powodować, zrobić wrażeni
 verbosity-gadatliwość, wielomówność, gadulstwo, pustosłowie
 credential-poświadczenie
 credentials-referencje
+ascending-rosnąco

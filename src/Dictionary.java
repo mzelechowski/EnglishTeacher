@@ -92,7 +92,8 @@ public class Dictionary {
         }
         //return dictionary;
         //return sortMapByKeys(dictionary);
-        return sortByKeys2(dictionary);
+        //return sortByKeys2(dictionary);
+        return sortBubbleByMe(dictionary);
     }
 
     private void printAllAnswers(String keyWord) {
@@ -119,5 +120,25 @@ public class Dictionary {
                 .sorted(Map.Entry.comparingByKey())
                 .forEachOrdered(x -> result2.put(x.getKey(), x.getValue()));
         return result2;
+    }
+
+    public static Map<String, List<String>> sortBubbleByMe(Map<String, List<String>> map) {
+        List<Map.Entry<String, List<String>>> listOfMap = new LinkedList<>(map.entrySet()) ;
+        Map.Entry<String, List<String>> temp1;
+        Map<String, List<String>> orderMap = new LinkedHashMap<>();
+        System.out.println(listOfMap.size());
+        for (int j = 0; j < listOfMap.size(); j++) {
+            for (int i = j + 1; i < listOfMap.size(); i++) {
+                if (listOfMap.get(i).getKey().compareTo(listOfMap.get(j).getKey()) < 0) {
+                    temp1 = listOfMap.get(j);
+                    listOfMap.set(j, listOfMap.get(i));
+                    listOfMap.set(i, temp1);
+                }
+            }
+        }
+        for (Map.Entry<String, List<String>> e : listOfMap) {
+            orderMap.put(e.getKey(), e.getValue());
+        }
+        return orderMap;
     }
 }
