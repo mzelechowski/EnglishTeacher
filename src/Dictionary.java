@@ -83,16 +83,14 @@ public class Dictionary {
                 LinkedList wordTranslete = new LinkedList();
                 for (int i = 1; i < tab.length; i++) {
                     wordTranslete.add(tab[i].trim());
+
                 }
-                dictionary.put(tab[0], wordTranslete);
+                dictionary.put(tab[0].replaceAll("[^\\x00-\\x7F]", "").trim(), wordTranslete);
             }
             br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //return dictionary;
-        //return sortMapByKeys(dictionary);
-        //return sortByKeys2(dictionary);
         return sortBubbleByMe(dictionary);
     }
 
@@ -126,7 +124,6 @@ public class Dictionary {
         List<Map.Entry<String, List<String>>> listOfMap = new LinkedList<>(map.entrySet()) ;
         Map.Entry<String, List<String>> temp1;
         Map<String, List<String>> orderMap = new LinkedHashMap<>();
-        System.out.println(listOfMap.size());
         for (int j = 0; j < listOfMap.size(); j++) {
             for (int i = j + 1; i < listOfMap.size(); i++) {
                 if (listOfMap.get(i).getKey().compareTo(listOfMap.get(j).getKey()) < 0) {
