@@ -11,7 +11,7 @@ public class Dictionary {
     private int correct;
     private int incorrect;
     private Map<String, List<String>> dictionaryAsMap;
-    private LinkedList<String> keyList;
+    private List<String> keyList;
 
     public Dictionary() {
         this.correct = 0;
@@ -33,7 +33,6 @@ public class Dictionary {
             } else {
                 String finalAnswer = answer;
                 if (dictionaryAsMap.get(keyWord).stream().anyMatch(d -> d.toLowerCase().equals(finalAnswer.toLowerCase()))) {
-                    //answer.contains(dictionary.get(keyWord).get(0))
                     System.out.println("\t\t\t\tBarwo odgadłeś szukane słowwo :D. " +
                             "Wszystkie tłumaczenia dla słowa " + ConsoleColors.GREEN_BOLD + keyWord + ConsoleColors.RESET + " to:");
                     printAllAnswers(keyWord);
@@ -42,7 +41,6 @@ public class Dictionary {
                     incorrect++;
                     System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna. :(");
                     System.out.println("Poprawne odpowiedzi to:");
-                    //+ dictionary.get(keyWord) + ConsoleColors.RESET);
                     printAllAnswers(keyWord);
                 }
             }
@@ -55,7 +53,7 @@ public class Dictionary {
         System.out.println("Podałeś nieprawidłowych odpowiedzi: " + incorrect);
     }
 
-    private LinkedList<String> getKeyListFromMap(Map<String, List<String>> dictionary) {
+    private List<String> getKeyListFromMap(Map<String, List<String>> dictionary) {
         LinkedList<String> keyList = new LinkedList<>();
         for (Map.Entry<String, List<String>> entry : dictionary.entrySet()) {
             keyList.add(entry.getKey());
@@ -112,7 +110,7 @@ public class Dictionary {
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
     }
-    public Map<String, List<String>>  sortByKeys2(Map<String, List<String>> map) {
+    public Map<String, List<String>>  sortByKeysV2(Map<String, List<String>> map) {
         Map<String, List<String>> result2 = new LinkedHashMap<>();
         map.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
@@ -120,7 +118,7 @@ public class Dictionary {
         return result2;
     }
 
-    public static Map<String, List<String>> sortBubbleByMe(Map<String, List<String>> map) {
+    public Map<String, List<String>> sortBubbleByMe(Map<String, List<String>> map) {
         List<Map.Entry<String, List<String>>> listOfMap = new LinkedList<>(map.entrySet()) ;
         Map.Entry<String, List<String>> temp1;
         Map<String, List<String>> orderMap = new LinkedHashMap<>();
