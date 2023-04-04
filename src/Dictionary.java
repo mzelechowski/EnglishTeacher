@@ -32,7 +32,7 @@ public class Dictionary {
                 System.out.println("Zakonczyles program");
             } else {
                 String finalAnswer = answer;
-                if (dictionaryAsMap.get(keyWord).stream().anyMatch(d -> d.toLowerCase().contains(finalAnswer.toLowerCase()))) {
+                if (dictionaryAsMap.get(keyWord).stream().anyMatch(d -> d.toLowerCase().equals(finalAnswer.toLowerCase()))) {
                     //answer.contains(dictionary.get(keyWord).get(0))
                     System.out.println("\t\t\t\tBarwo odgadłeś szukane słowwo :D. " +
                             "Wszystkie tłumaczenia dla słowa " + ConsoleColors.GREEN_BOLD + keyWord + ConsoleColors.RESET + " to:");
