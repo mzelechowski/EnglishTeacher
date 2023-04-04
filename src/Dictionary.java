@@ -91,8 +91,8 @@ public class Dictionary {
             e.printStackTrace();
         }
         //return dictionary;
-        //return sortMapByValues(dictionary);
-        return sortByKey2(dictionary);
+        //return sortMapByKeys(dictionary);
+        return sortByKeys2(dictionary);
     }
 
     private void printAllAnswers(String keyWord) {
@@ -108,12 +108,12 @@ public class Dictionary {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
     }
-    public Map<String, List<String>> sortMapByValues(Map<String, List<String>> map) {
+    public Map<String, List<String>> sortMapByKeys(Map<String, List<String>> map) {
         return map.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
     }
-    public Map<String, List<String>>  sortByKey2(Map<String, List<String>> map) {
+    public Map<String, List<String>>  sortByKeys2(Map<String, List<String>> map) {
         Map<String, List<String>> result2 = new LinkedHashMap<>();
         map.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
