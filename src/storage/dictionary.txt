@@ -8,7 +8,7 @@ commit-zatwierdzenie,
 insight-wgląd, wnikliwość, intuicja,
 unmerged-niescalone
 merge-łączyć, scalać, połączyć się, włączać, zlać się, wcielać, kumulować
-include-włączać
+include-włączać, zawierać, uwzględniać, objąć, mieścić, wcielać, podciągać
 discard-wyrzucać, odrzucać, porzucić, wylać z pracy, zrzutka
 current-aktualny, bieżący, prąd, nurt, natężęnie prądu, potoczny, rozpowszechniony, obiegowy, nagminny
 hank-motek, talka, kłębek, raksa, pełzacz
@@ -23,3 +23,8 @@ verbosity-gadatliwość, wielomówność, gadulstwo, pustosłowie
 credential-poświadczenie
 credentials-referencje
 ascending-rosnąco
+persist-utrwal, trwać, wytrwać, upierać się, robić coś nieustannie
+resposne-odpowiedź, reakcja, reagowanie, odzew, oddźwięk, echo, odezwanie się
+snippet-skrawek, strzęp, fragment
+denote-oznaczać, wskazać, znamionować, desygnować, cechować
+transitively-przechodnio

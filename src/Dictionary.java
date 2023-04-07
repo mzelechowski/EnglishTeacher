@@ -33,14 +33,14 @@ public class Dictionary {
             } else {
                 String finalAnswer = answer;
                 if (dictionaryAsMap.get(keyWord).stream().anyMatch(d -> d.toLowerCase().equals(finalAnswer.toLowerCase()))) {
-                    System.out.println("\t\t\t\tBarwo odgadłeś szukane słowwo :D. " +
+                    System.out.println("\t\u2696\t\u261D\u261D Barwo odgadłeś szukane słowwo :D. " +
                             "Wszystkie tłumaczenia dla słowa " + ConsoleColors.GREEN_BOLD + keyWord + ConsoleColors.RESET + " to:");
                     printAllAnswers(keyWord);
                     correct++;
                 } else {
                     incorrect++;
-                    System.out.println("\t\t\t\tNiestety odpowiedź jest niepoprawna. :(");
-                    System.out.println("Poprawne odpowiedzi to:");
+                    System.out.println(ConsoleColors.RED+"\t\u2622\u26A0\u26A1\u26B0 Niestety odpowiedź jest niepoprawna. :(");
+                    System.out.println(ConsoleColors.RESET +"Poprawne odpowiedzi to:");
                     printAllAnswers(keyWord);
                 }
             }
@@ -66,7 +66,7 @@ public class Dictionary {
         File file = new File(pathFileName);
         //Charset ch = Charset.forName("UTF-8");
         if (!file.exists()) {
-            System.out.println("Dictionary file does not exist. The program will be interrupted.");
+            System.out.println("Dictionary file does not exist. The program will be interrupted.!!!");
             System.out.println("Check that the given path to file and fileName of the dictionary file are correct.");
             System.exit(0);
         }
